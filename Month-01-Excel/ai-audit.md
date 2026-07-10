@@ -12,8 +12,7 @@ AI answered 7 out of 8 questions correctly.
 87.5% accuracy.
 
 **The error - Q6 Average Unit Price:**  
-Correct answer: 26.454
-
+Correct answer: 26.454  
 AI answer: 49.05
 
 **Error type:**
