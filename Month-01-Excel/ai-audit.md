@@ -3,7 +3,7 @@
 ---
 
 ## Week 1 Audit - Basic Formulas
-**Date:** July 2026
+**Date:** July 2026  
 **Task given to AI:**
 Solve 8 business questions on a retail sales dataset using basic Excel Formulas.
 
