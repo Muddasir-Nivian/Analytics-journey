@@ -18,8 +18,8 @@ to catch when AI gets it wrong.
 
 | Week | Focus | Status |
 |---|---|---|
-| Week 1 | Basics, SUM AVERAGE COUNT MAX MIN, small datasets | Ongoing |
-| Week 2 | IF AND OR, data validation, charts, storytelling | Upcoming |
+| Week 1 | Basics, SUM AVERAGE COUNT MAX MIN, small datasets | Completed |
+| Week 2 | IF AND OR, data validation, charts, storytelling | Ongoing |
 | Week 3 | VLOOKUP HLOOKUP INDEX MATCH, lookup logic | Upcoming |
 | Week 4 | Pivot Tables, KPIs, Sales Dashboard project | Upcoming |
 
