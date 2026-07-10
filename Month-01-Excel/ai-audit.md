@@ -7,10 +7,11 @@
 **Task given to AI:**
 Solve 8 business questions on a retail sales dataset using basic Excel Formulas.
 
-**Results:**
-AI answered 7 out of 8 questions correctly. 87.5% accuracy.
+**Results:**  
+AI answered 7 out of 8 questions correctly.  
+87.5% accuracy.
 
-**The error - Q6 Average Unit Price:**
+**The error - Q6 Average Unit Price:**  
 Correct answer: 26.454
 
 AI answer: 49.05
