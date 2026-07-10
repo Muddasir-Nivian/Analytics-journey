@@ -39,7 +39,7 @@ This section grows weekly.
 |---|---|
 | README.md | This monthly overview |
 | week-notes.md | Weekly diary entries for this month |
-| Work files | Excel practice files and project screenshots |
+| ai-audit.md | AI audits and validations entries |
 
 ---
 
