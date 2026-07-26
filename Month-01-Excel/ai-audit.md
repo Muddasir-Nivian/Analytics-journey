@@ -55,3 +55,29 @@ Different colour influences differently in human brain, Having a different kind 
 
 **Lesson:**  
 AI can create charts and execute formulas and calculations behind it almost correctly but it isn't restricted or responsible for human psychology yet, AI can't execute the tasks in a way that intersects Influencing human psychology and Data yet.
+
+## Week 3 Audit - Lookup Formulas  
+**Date:** July 2026
+
+**Overall finding:**  
+AI almost always got the formula implementation correct when the task logic was clearly explained.  
+The core formula structure VLOOKUP, HLOOKUP, INDEX MATCH was handled accurately.
+
+**What this reveals:**  
+AI can produce the right output when the core logic is clear.  
+But that clarity only comes from someone who understands the data, the task and the formula family well enough to explain it precisely.  
+Without that structured explaination AI can misinterpret the task and produce confidently wrong formulas that took correct on the surface.
+
+**The deeper insight:**  
+Two layers of human experties are still required.  
+First someone must understand the data and the business question clearly enough to give AI a well structured prompt.  
+Second someone must understand the formulas and the data well enough to audit the output and catch errors in logic or column references.  
+AI handles the middle execution layer but both ends require human judgment.
+
+**Error type this week:**  
+Conceptual when task logic was ambiguous AI defaulted to plausible but incorrect interpretations requiring correction.
+
+**Lesson:**  
+Business Analysis cannot be relied 100% on AI.  
+It needs a person with understanding of data, logical thinking and tools to validate its outputs.  
+The analyst who can direct AI clearly and audit its results precisely is the person who cannot be replaced.
