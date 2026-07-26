@@ -59,3 +59,34 @@ the analysis loses almost all its impact no matter how technically correct it is
 
 **Confidence:** 4/5
 Strong on IF logic and data validaton. Chart selection and storytelling need more practice with real data accross different business scenarios.
+
+## Week 3 - VLOOKUP, HLOOKUP, INDEX, MATCH  
+**Date:** July 2026  
+**Focus:** Lookup Formulas - finding and retrieving data across tables
+
+**What I studied:**
+VLOOKUP - looks vertically in a given column and returns the value from the intersecting row.  
+Hlookup - looks horizontally in a given row and returns the value from the intersecting column number.  
+INDEX - retrieves a value by validating a given row and column number.  
+MATCH - validates whether a given value exists in an array and it works as the row number in INDEX.
+
+**What I built:**
+Completed VLOOKUP practice across three sections including basic lookup, IFERROR error handling and a real business order form that auto fills product details from a master table.  
+Completed HLOOKUP practice on regional sales targets including IF combined with HLOOKUP to determine which cities hit their target sales.  
+Completed INDEX MATCH practice returning employee salary and performance by name including finding the highest earning employee using MAX.  
+Completed all four challenge questions combining VLOOKUP, HLOOKUP, INDEX MATCH and nested IF together.
+
+**What caused most confusion:**
+Not mistake in formula syntax but confusion with the logic of the task itsel.  
+Understanding what the data meant and what comparison was actually required took two or three attempts before the logic clicked.  
+Once the task logic was clear the formula followed naturally.
+
+**Key distinctions learned:**
+INDEX MATCH can return values to the left of the search column. LOOKUP cannot.  
+This makes INDEX MATCH the more flexible and professional choice for complex lookups.
+
+**Bug caught and understood:**
+IFS evaluates conditions in sequence and stops at the first match.  
+Let's say you entered three logics so it will check whether the value intersect with the first logic if not then it will go for the second logic if by any chance the second logic intersect with the value IFS will return it as the true without checking that the third logic also intersect with the value.
+
+**Confidence:** 4.3/5
