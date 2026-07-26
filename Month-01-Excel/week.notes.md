@@ -77,7 +77,7 @@ Completed INDEX MATCH practice returning employee salary and performance by name
 Completed all four challenge questions combining VLOOKUP, HLOOKUP, INDEX MATCH and nested IF together.
 
 **What caused most confusion:**
-Not mistake in formula syntax but confusion with the logic of the task itsel.  
+Not mistake in formula syntax but confusion with the logic of the task itself.  
 Understanding what the data meant and what comparison was actually required took two or three attempts before the logic clicked.  
 Once the task logic was clear the formula followed naturally.
 
@@ -87,6 +87,6 @@ This makes INDEX MATCH the more flexible and professional choice for complex loo
 
 **Bug caught and understood:**
 IFS evaluates conditions in sequence and stops at the first match.  
-Let's say you entered three logics so it will check whether the value intersect with the first logic if not then it will go for the second logic if by any chance the second logic intersect with the value IFS will return it as the true without checking that the third logic also intersect with the value.
+Let's say you entered three logics so it will check whether the value intersect with the first logic if not then it will go for the second logic if by any chance the second logic intersect with the value IFS will return it as the true without checking that the third logic also intersects with the value.
 
 **Confidence:** 4.3/5
