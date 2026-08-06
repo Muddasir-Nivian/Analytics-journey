@@ -98,3 +98,6 @@ Human emotions and feelings are something that can't be fully describe in words 
 **Error type this week:**  
 Not a data error, not a conceptual error, not even logic error.  
 Error that data or let's say AI can't be blamed for the Error in Executing task it lacks the intersection with human emotions.
+
+**Lesson:**  
+Any decision or action that intersect with human emotions can't be completely execute by AI perfectly.
