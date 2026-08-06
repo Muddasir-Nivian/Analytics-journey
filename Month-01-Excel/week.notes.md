@@ -95,4 +95,8 @@ Let's say you entered three logics so it will check whether the value intersect 
 **Focus:** Creating Pivot Tables, Applying Conditional Formatting On Pivot Tables, Creating and Connecting Slicers to charts, Defining KPIs that Matters to Business, Separating Matrics and KPIs, Dashboard Layout Designing
 
 **What I Studied:**
-Creating Pivot Tables and Multiple Logics with Values, Rows, Columns, 
+Creating Pivot Tables and Multiple Logics with Values, Rows, Columns and How Slicers Works, Which Data is KPI That Matters to business and leads to any action and Insight That doesn't Lead to any action is just Matrics mean Just a Data but Still Can be the important information that CEO, Sales Director or Other Decision Makers might need, Sorting Insights into Charts and Table in such a way that officials gets the point what is data telling the second after watching the visuals or dashboard, How Conditional Formatting works with multiple Logics and visuals like Data Formatting, Formula Formatting, Defining KPIs What Does an Insight Tells, How it Defines the risk, Loss, Growth, What should be fixed, Improved, Scale, Descale, Integrate, Withdraw, What Should need more detailed Analysis.
+
+**What I built:**
+Complete Sales Analysis Dashboard with sales data with 200 rows across six months sales data, Found the Top Performing Regions, Categories, Sales Rep, Customer Segment, Tracking Parameters Performance across six months such as Region, Categories, Customer Segment, Further here is the complete version:
+
