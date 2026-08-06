@@ -81,3 +81,20 @@ Conceptual when task logic was ambiguous AI defaulted to plausible but incorrect
 Business Analysis cannot be relied 100% on AI.  
 It needs a person with understanding of data, logical thinking and tools to validate its outputs.  
 The analyst who can direct AI clearly and audit its results precisely is the person who cannot be replaced.
+
+## Week 4 Audit - Pivot Tables, Charts, Dashboard  
+**Date:** July 2026
+
+**Overall finding:**  
+AI got calculations right but failed on thinking as second person perspective and execute things that it gets clicked to the person such as charts choice, Colour Consistency, Structured and Interactive Dashboard Design.
+
+**What this reveals:**  
+AI can produce the right calculations and formulations right but it lacks the emotional and cognitive understanding of human brain. How human Perceive the data, what specific structure grabs the attention and creates a map, logic and key point of data in brain.  
+AI output is valuable but sorting it in structured way that if watches it gets the story behind data in a moment is something it still lacks.
+
+**The deeper insight:**  
+Human emotions and feelings are something that can't be fully describe in words and understanding it by data is possible but can't be reached 100% understanding, Human emotions are something that needs empathy to be understand that even most of human lacks to get it understanding what human brain perceive as good what it perceive as bad by colours, structures, patterns, etcetera. What AI Knows is 1 in return of 0, How human emotions work is 1,11,10,01,001,1100 in return of 0 and which one will sync best in return of 0 from 1,11,10,01,001,1100 is something that will create more probabilities like 1 would be best if 0 is attached with 010 in deep behind 11 will be best if 0 is attached with 101 deep behind and even after that data sometimes it collapse on its own because a new probability enters so sorting human emotions in data is like sorting every probability present in environment that it can never be completely sorted.
+
+**Error type this week:**  
+Not a data error, not a conceptual error, not even logic error.  
+Error that data or let's say AI can't be blamed for the Error in Executing task it lacks the intersection with human emotions.
