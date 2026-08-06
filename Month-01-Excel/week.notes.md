@@ -90,3 +90,9 @@ IFS evaluates conditions in sequence and stops at the first match.
 Let's say you entered three logics so it will check whether the value intersect with the first logic if not then it will go for the second logic if by any chance the second logic intersect with the value IFS will return it as the true without checking that the third logic also intersects with the value.
 
 **Confidence:** 4.3/5
+## Week 3 - Pivot Tables, Conditional Formatting, Slicers, KPI Definition. Mini Project: Sales Analysis Dashboard
+**Date:** July 2026  
+**Focus:** Creating Pivot Tables, Applying Conditional Formatting On Pivot Tables, Creating and Connecting Slicers to charts, Defining KPIs that Matters to Business, Separating Matrics and KPIs, Dashboard Layout Designing
+
+**What I Studied:**
+Creating Pivot Tables and Multiple Logics with Values, Rows, Columns, 
