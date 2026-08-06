@@ -90,7 +90,7 @@ IFS evaluates conditions in sequence and stops at the first match.
 Let's say you entered three logics so it will check whether the value intersect with the first logic if not then it will go for the second logic if by any chance the second logic intersect with the value IFS will return it as the true without checking that the third logic also intersects with the value.
 
 **Confidence:** 4.3/5
-## Week 3 - Pivot Tables, Conditional Formatting, Slicers, KPI Definition. Mini Project: Sales Analysis Dashboard
+## Week 4 - Pivot Tables, Conditional Formatting, Slicers, KPI Definition. Mini Project: Sales Analysis Dashboard
 **Date:** July 2026  
 **Focus:** Creating Pivot Tables, Applying Conditional Formatting On Pivot Tables, Creating and Connecting Slicers to charts, Defining KPIs that Matters to Business, Separating Matrics and KPIs, Dashboard Layout Designing
 
@@ -98,7 +98,7 @@ Let's say you entered three logics so it will check whether the value intersect 
 Creating Pivot Tables and Multiple Logics with Values, Rows, Columns and How Slicers Works, Which Data is KPI That Matters to business and leads to any action and Insight That doesn't Lead to any action is just Matrics mean Just a Data but Still Can be the important information that CEO, Sales Director or Other Decision Makers might need, Sorting Insights into Charts and Table in such a way that officials gets the point what is data telling the second after watching the visuals or dashboard, How Conditional Formatting works with multiple Logics and visuals like Data Formatting, Formula Formatting, Defining KPIs What Does an Insight Tells, How it Defines the risk, Loss, Growth, What should be fixed, Improved, Scale, Descale, Integrate, Withdraw, What Should need more detailed Analysis.
 
 **What I built:**
-Complete Sales Analysis Dashboard with sales data with 200 rows across six months sales data, Found the Top Performing Regions, Categories, Sales Rep, Customer Segment, Tracking Parameters Performance across six months such as Region, Categories, Customer Segment, Further here is the complete version:  
+Complete Sales Analysis Dashboard with sales data with 200 rows across six months, Found the Top Performing Regions, Categories, Sales Rep, Customer Segment, Tracking Parameters Performance across six months such as Region, Categories, Customer Segment, Further here is the complete version:  
 [Month 01 - Week 4 - Practice File and Mini Project](/Month-01-Excel/Month1_Week4_Practice(AutoRecovered).xlsx/)  
 [Mini Project Sales Analysis Dashboard Image](/Month-01-Excel/Nexacore%20Sales%20Dashboard.png/)
 
