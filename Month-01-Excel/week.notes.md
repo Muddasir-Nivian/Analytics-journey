@@ -99,7 +99,7 @@ Creating Pivot Tables and Multiple Logics with Values, Rows, Columns and How Sli
 
 **What I built:**
 Complete Sales Analysis Dashboard with sales data with 200 rows across six months sales data, Found the Top Performing Regions, Categories, Sales Rep, Customer Segment, Tracking Parameters Performance across six months such as Region, Categories, Customer Segment, Further here is the complete version:  
-[Month 01 - Week 4 - Practice File and Mini Project](./Month-01-Excel/Month1_Week4_Practice(AutoRecovered).xlsx)
+[Month 01 - Week 4 - Practice File and Mini Project](./Month-01-Excel/Month1_Week4_Practice(AutoRecovered).xlsx/)
 
 **Key Distinctions Learned:**
 Picking up right Chart Type according to what data is telling is more important than insight itself, Insight worth nothing with wrong visualization the key point to understand about KPIs or Matrics gets vanished.  
