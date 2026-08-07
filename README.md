@@ -31,7 +31,7 @@ All documented here.
 ## Monthly Documentation
 
 - [Month 01 - Excel Fundamentals](./Month-01-Excel/)
-- Month 02 - Excel Advanced - coming soon
+- [Month 02 - Excel Advanced](./Month-02-Excel-Advanced/)
 - Month 03 - SQL Basics - coming soon
 
 ---
