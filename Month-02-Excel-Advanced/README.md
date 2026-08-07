@@ -40,7 +40,7 @@ against the real result before it's trusted. This section grows weekly.
 |---|---|
 | README.md | This monthly overview |
 | [week-notes.md](./week-notes.md/) | Weekly diary entries for this month |
-| ai-audit.md | AI audit log, Copilot-specific findings |
+| [ai-audit.md](./ai-audit.md/) | AI audit log, Copilot-specific findings |
 | Work files | Excel practice files and projects screenshots |
 
 ---
