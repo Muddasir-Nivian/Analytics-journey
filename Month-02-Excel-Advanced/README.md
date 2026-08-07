@@ -39,7 +39,7 @@ against the real result before it's trusted. This section grows weekly.
 | File | What It Contains |
 |---|---|
 | README.md | This monthly overview |
-| week-notes.md | Weekly diary entries for this month |
+| [week-notes.md](./Month-02-Excel-Advanced/week-notes.md/) | Weekly diary entries for this month |
 | ai-audit.md | AI audit log, Copilot-specific findings |
 | Work files | Excel practice files and projects screenshots |
 
