@@ -1,1 +1,1 @@
-# This Folder Contains Every Practice File, Screenshots, Screen-Recordings related linked to weekly work of Month-02.
+# This Folder Contains Every Practice File, Screenshots, Screen-Recordings related linked to week-notes of Month-02.
