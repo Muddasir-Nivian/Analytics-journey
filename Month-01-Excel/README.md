@@ -1,7 +1,7 @@
 # Month 01 - Excel Fundamentals
 
 **Started:** July 2026
-**Status:** Ongoing
+**Status:** Completed
 **Duration:** 4 weeks (Weeks 1-4)
 
 ---
