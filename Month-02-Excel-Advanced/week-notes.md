@@ -1,3 +1,7 @@
+# week-notes — Month 02 Excel Advanced
+
+---
+
 ## Week 5 — SUMIFS, COUNTIFS, XLOOKUP
 **Date:** August 2026
 **Focus:** Multi-condition formulas and modern lookup
