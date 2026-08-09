@@ -1,4 +1,4 @@
-# week-notes — Month 02 Excel Advanced
+# Week Notes — Month 02 Excel Advanced
 
 ---
 
