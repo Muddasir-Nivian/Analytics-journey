@@ -29,7 +29,8 @@ no need to wrap it in IFERROR separately.
 
 **Looking back at earlier practice:**
 Revisiting a Week 2 project where I was manually filtering data row
-by row to find answers, SUMIFS and COUNTIFS made the exact same
+by row to find answers,  
+SUMIFS and COUNTIFS made the exact same
 questions solvable in a single formula. A clear reminder of how
 much easier each new tool makes the work that used to take
 significant manual effort.
