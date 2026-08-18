@@ -44,3 +44,53 @@ Passing a single test case is not proof a formula is correct.
 Auditing AI output means checking the formula's logic itself, not
 just whether the number that came back looks reasonable. A bug
 that does not surface on one input can still surface on the next.
+
+
+## Week 6 Audit — Combo Charts, Histograms, Trendlines, KPI Classification
+**Date:** August 2026
+
+**Task given to AI:** Build the combo chart, choose histogram bin
+width, interpret the trendline's R-squared value, and classify all
+8 Week 4 KPIs as Vanity, Diagnostic, or Actionable.
+
+**Results:**
+Combo chart and histogram bin width were both correct with nothing
+significant to flag.
+
+The R-squared interpretation was where the first real issue showed
+up. AI stated the trend was "STATISTICALLY SIGNIFICANT" based on a
+p-value of 0.0190 from only 6 months of data. Confidently labeling
+a 6-point dataset as statistically significant is the kind of claim
+that sounds authoritative but does not hold up to scrutiny a
+sample that small makes any significance test fragile, and a real
+analyst should question that confidence before repeating it to a
+CEO.
+
+The clearest finding came from the KPI classification task. AI
+classified Total Revenue as pure Vanity, reasoning that it is a
+lagging indicator that does not explain why revenue moved. My own
+classification was a mix of Vanity and Actionable, since Total
+Revenue can still drive real decisions depending on business
+context. AI and I reached opposite conclusions on the exact same
+question.
+
+**Error type:**
+Business judgment and conceptual
+
+**Why this error happened:**
+As I gave AI options in series like Vanity, Diagnostic and
+Actionable it first checked for Vanity as Vanity was valid on KPI
+type, it confirmed and considered it as the only answer without
+checking whether another option can also be valid if checked
+further. Once it finds any option valid it doesn't move further
+and declares the first valid condition met as true.
+
+**How I caught it:**
+Comparing the answer with business and analysis logic.
+
+**Lesson:**
+An AI answer that is technically correct is not the same as an
+answer that reflects real business judgment. Auditing AI output on
+subjective classification tasks requires imagining the downstream
+consequences of the answer, not just checking whether it followed
+the instructions.
