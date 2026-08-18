@@ -20,8 +20,8 @@ wrong most often.
 | Week | Focus | Status |
 |---|---|---|
 | Week 5 | SUMIFS, COUNTIFS, Excel Copilot audit practice begins | Completed |
-| Week 6 | Combo charts, histograms, trendlines, KPI depth | Ongoing |
-| Week 7 | Data cleaning duplicates, blanks, text functions | Upcoming |
+| Week 6 | Combo charts, histograms, trendlines, KPI depth | Completed |
+| Week 7 | Data cleaning duplicates, blanks, text functions | Ongoing |
 | Week 8 | Final Excel Project 1 year sales data, full AI audit write-up | Upcoming |
 
 ---
