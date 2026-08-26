@@ -87,3 +87,45 @@ stops at the first valid match rather than evaluating all
 possibilities before choosing.
 
 **Confidence:** 5/5
+
+## Week 7 — Data Cleaning, Text Functions, Duplicate Removal
+**Date:** August 2026
+**Focus:** Cleaning messy real world text data
+
+**What I studied:**
+TRIM, PROPER, LOWER, UPPER, LEFT, RIGHT, MID, FIND, and SUBSTITUTE.
+Also duplicate detection using COUNTIFS before using Excel's built-in
+Remove Duplicates tool.
+
+**What I built:**
+Cleaned a deliberately messy customer feedback dataset, trimmed and
+properly capitalized names, standardized emails, split combined
+fields like Region-Store Code and Product Code + Name into separate
+columns, and standardized phone numbers written in three different
+formats. Flagged duplicate entries with COUNTIFS before removing
+them, to see exactly what would be deleted before committing to it.
+
+**What clicked:**
+TRIM only removes extra spaces. SUBSTITUTE can replace any value
+with whatever you want to change it to. That distinction is the
+difference between cleaning up spacing and actually rewriting
+content.
+
+**A question that came up mid-practice:**
+If Excel can handle almost every business scenario I imagined, why
+learn SQL and Power BI at all? The answer Excel is mostly used for
+cleaning and formatting, and if the dataset is not too large, the
+analysis itself can be done in Excel too. But scale, automation, and
+multi-user access are where Excel's limits show up, which is where
+SQL and Power BI take over.
+
+**AI Audit highlight:**
+Caught AI nesting FIND directly inside LEFT's argument instead of
+splitting it into two separate steps. What made this audit
+worthwhile was that AI found a genuinely smarter, more dynamic
+mathematical approach to the same problem not just a different
+way of writing the same logic, but a better one. Simpler tasks in
+the same audit had nothing to dig into, since there was no
+intellectual ground to cover beyond the one obvious correct answer.
+
+**Confidence:** 4.9/5
