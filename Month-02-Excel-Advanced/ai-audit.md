@@ -94,3 +94,58 @@ answer that reflects real business judgment. Auditing AI output on
 subjective classification tasks requires imagining the downstream
 consequences of the answer, not just checking whether it followed
 the instructions.
+
+# AI Audit Log — Month 02 Excel Advanced
+
+---
+
+## Week 7 Audit — Text Functions and Duplicate Detection
+**Date:** August 2026
+
+**Task given to AI:** Clean the Region-Store Code split, split
+Product Code and Name, standardize phone numbers, and remove
+duplicates from the customer feedback dataset.
+
+**Results:**
+Two tasks splitting Region-Store Code and Product Code/Name
+produced the strongest findings of the week. AI nested FIND
+directly inside LEFT's num_chars argument rather than writing it
+as two separate formulas the way I did. For the product split, it
+used LEN(A2) as a self-referencing "return everything remaining"
+trick instead of a hardcoded number. Both approaches were valid,
+and both revealed something real: AI does not default to the most
+obvious step-by-step logic — it finds dynamic mathematical
+shortcuts that solve the problem more efficiently, working off
+possibilities rather than copying the exact method I would have
+used.
+
+The phone number standardization task surfaced a genuine knowledge
+gap AI used TEXT(VALUE(...), "000-000-0000") to reformat digits
+into a standard pattern, a function combination I had not learned
+yet and could not fully evaluate at the time.
+
+The two simplest tasks basic name cleaning and the plain "remove
+duplicates" instruction with no further specification had nothing
+meaningful to audit. The tasks were basic enough that only one
+correct answer existed, leaving no real decision for AI to make
+differently or better.
+
+**Error type:**
+Not applicable for the strong findings, AI was correct, just
+structured differently. The weak audits had no error to identify,
+which is itself worth noting as a limitation of testing AI on
+tasks with only one possible right answer.
+
+**Why this matters:**
+The clearest signal this week was that auditing AI is only valuable
+when the task has room for multiple valid approaches. When AI finds
+a smarter path than the one I would have written, that is worth
+understanding and learning from not just confirming the output
+matched. When a task is too simple to have more than one correct
+answer, there is nothing left to audit beyond correctness itself.
+
+**Lesson:**
+The real skill this week was not catching AI being wrong. It was
+recognizing when AI found a better, more dynamic solution than my
+own and being honest enough to learn from it instead of just
+checking whether the final number matched.
