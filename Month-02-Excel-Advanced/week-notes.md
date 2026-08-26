@@ -104,6 +104,7 @@ fields like Region-Store Code and Product Code + Name into separate
 columns, and standardized phone numbers written in three different
 formats. Flagged duplicate entries with COUNTIFS before removing
 them, to see exactly what would be deleted before committing to it.
+To access week 7 excel file [Click here](./Work%20files/Month2%20Week7%20Practice.xlsx)
 
 **What clicked:**
 TRIM only removes extra spaces. SUBSTITUTE can replace any value
