@@ -16,8 +16,8 @@ All documented here.
 
 | Phase | Focus | Status |
 |---|---|---|
-| Month 1-2 | Excel Fundamentals + Advanced | Ongoing |
-| Month 3-4 | SQL Basics + Advanced | Upcoming |
+| Month 1-2 | Excel Fundamentals + Advanced | Completed |
+| Month 3-4 | SQL Basics + Advanced | Ongoing |
 | Month 5-7 | Python for Data Analysis | Upcoming |
 | Month 8-9 | Power BI Dashboarding | Upcoming |
 | Month 10-11 | Portfolio + Communication | Upcoming |
