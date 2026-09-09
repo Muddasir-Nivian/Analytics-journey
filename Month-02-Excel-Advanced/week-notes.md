@@ -130,3 +130,42 @@ the same audit had nothing to dig into, since there was no
 intellectual ground to cover beyond the one obvious correct answer.
 
 **Confidence:** 4.9/5
+
+## Week 8 — Final Excel Project (Month 1-2 Capstone)
+**Date:** August 2026
+**Focus:** Combining every skill from Weeks 1 through 7 into one project
+
+**What I built:**
+Cleaned a full year of messy Vantree Retail Group sales data — text
+functions, duplicate detection, region and category standardization.
+Flagged negative quantities and impossible delivery dates with IF.
+Enriched the dataset with VLOOKUP pulling from a Product Master and
+Employee Master. Built the KPI summary row with SUMIFS and COUNTIFS.
+Assembled the final dashboard with Pivot Tables, charts, and a
+written executive summary.
+
+**What went wrong — and why:**
+Three formula bugs surfaced this week — the negative quantity flag,
+the impossible date flag, and the duplicate detection COUNTIFS all
+referenced the wrong columns. The cause wasn't a misunderstanding of
+the functions themselves — I had written those formulas before
+adding new columns like Month and the separated fields, which shifted
+every column reference to the side without me updating them. Not a
+logic error. A sequencing error.
+
+**What I actually learned by combining everything, not just
+completing each phase separately:**
+The tools change from month to month — this month it was IF,
+VLOOKUP, SUMIFS, Pivot Tables — but the actual work of solving a
+problem and pulling a real insight out of messy data comes down to
+critical thinking and problem solving underneath whatever tool is in
+front of me. Month 1 and Month 2 both proved that the tool is
+replaceable. The thinking behind it is not.
+
+**Confidence:** 4.5/5
+
+**Carrying into Month 3:**
+Critical thinking and problem solving — not any specific formula or
+function. Those two skills held up across two completely different
+sets of tools this month, which is the clearest proof yet that they
+are the actual constant, not whatever software I happen to be using.
