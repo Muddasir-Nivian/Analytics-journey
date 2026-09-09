@@ -143,6 +143,7 @@ Enriched the dataset with VLOOKUP pulling from a Product Master and
 Employee Master. Built the KPI summary row with SUMIFS and COUNTIFS.
 Assembled the final dashboard with Pivot Tables, charts, and a
 written executive summary.
+To access Week 8 excel file [Click here](./Work%20files/Month2%20Week8%20Practice.xlsx)
 
 **What went wrong — and why:**
 Three formula bugs surfaced this week — the negative quantity flag,
