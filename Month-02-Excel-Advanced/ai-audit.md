@@ -145,3 +145,51 @@ The real skill this week was not catching AI being wrong. It was
 recognizing when AI found a better, more dynamic solution than my
 own and being honest enough to learn from it instead of just
 checking whether the final number matched.
+
+## Week 8 Audit — Final Project: Full Pipeline Under AI Review
+**Date:** August 2026
+
+**Task given to AI:** The complete Phase 1-2 cleaning task, the
+Phase 3 lookup task, the KPI Summary Row formulas, and the final
+Executive Summary — all given as full multi-step tasks rather than
+single isolated formulas.
+
+**Results:**
+AI handled every multi-step task correctly across Phase 1-2, Phase
+3, and the KPI Summary Row, matching my own manually verified
+answers in each case. One genuine discrepancy surfaced in the Phase
+3 lookup task — AI referenced column index 8 for pulling Product
+Code, while my own documented formula referenced column 7. Column 8
+is correct; column 7 points at Category instead. I marked that
+audit as fully correct without catching that AI's version was
+actually the more accurate one on that specific detail.
+
+The clearest finding came from the Executive Summary task. AI was
+given the completed dashboard and asked to write the board-facing
+summary. It correctly identified that a genuine year-over-year
+comparison was not possible from a single period of data and said
+so plainly instead of fabricating a trend. It also caught that
+Electronics carried both the highest revenue and the highest return
+count in the same dataset — the same insight I had found manually —
+and ended with one direct, specific recommendation, which is exactly
+where my own summary trailed off into something vaguer.
+
+**Error type:**
+Range — the Phase 3 column index discrepancy, not caught during the
+original audit pass, only surfaced on a closer second look.
+
+**Why this matters:**
+AI can handle a multi-step business task end to end when the
+instructions are clear, and it does not need hand-holding through
+each individual formula to get there. But that reliability does not
+mean the output should be accepted without comparing it line by line
+against your own independently built answer — the one real
+discrepancy this week was small, easy to miss, and only visible
+because I went back and checked column numbers directly instead of
+just comparing final results.
+
+**Lesson:**
+The most valuable audit of the month was not catching AI being
+wrong. It was catching AI being right in a place where my own work
+was wrong, and only noticing because I compared the actual formula
+structure, not just whether the numbers matched.
