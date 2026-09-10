@@ -44,7 +44,7 @@ Month 1 and Month 2.
 | README.md | This monthly overview |
 | week-notes.md | Weekly diary entries for this month |
 | ai-audit.md | AI audit log for SQL specific findings |
-| [Work files](./main/Month-03-SQL/Work%20Files) | SQL query files and project screenshots |
+| [Work files](./Work%20Files/) | SQL query files and project screenshots |
 
 
 *Updated weekly throughout Month 3.*
