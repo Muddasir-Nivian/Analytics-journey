@@ -24,7 +24,8 @@ against this dataset, but for a different reason — my version only
 worked because no January order happened to fall outside the specific
 range I picked. AI's version would still work correctly no matter
 which days in January had orders, because it matches the pattern
-itself rather than assuming where the range starts and ends.
+itself rather than assuming where the range starts and ends.  
+To access Week 9 ai audit file [Click here](./Work%20Files/Week9_AI_Audit%20(1).md/)
 
 **Error type:**
 Not applicable, AI was correct on every tested question. The finding
