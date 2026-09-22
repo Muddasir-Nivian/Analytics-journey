@@ -1,3 +1,5 @@
+# Week Notes - Month 03 SQL
+
 ## Week 9 — SQL Basics: SELECT, WHERE, ORDER BY, DISTINCT, LIMIT
 **Date:** September 2026
 **Focus:** Querying a real relational database for the first time
