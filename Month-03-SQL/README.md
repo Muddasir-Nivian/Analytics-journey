@@ -43,7 +43,7 @@ Month 1 and Month 2.
 |---|---|
 | [README.md](./README.md/) | This monthly overview |
 | [week-notes.md](./week-notes.md/) | Weekly diary entries for this month |
-| [ai-audit.md](./Month-03-SQL/ai-audit.md/) | AI audit log for SQL specific findings |
+| [ai-audit.md](./ai-audit.md/) | AI audit log for SQL specific findings |
 | [Work files](./Work%20Files/) | SQL query files and project screenshots |
 
 
