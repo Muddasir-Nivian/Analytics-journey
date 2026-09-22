@@ -42,7 +42,7 @@ Month 1 and Month 2.
 | File | What It Contains |
 |---|---|
 | README.md | This monthly overview |
-| week-notes.md | Weekly diary entries for this month |
+| [week-notes.md](./Month-03-SQL/week-notes.md/) | Weekly diary entries for this month |
 | ai-audit.md | AI audit log for SQL specific findings |
 | [Work files](./Work%20Files/) | SQL query files and project screenshots |
 
