@@ -1,4 +1,4 @@
-# Month 03 - SQL Basics + Advanced
+# Month 03 - SQL Basics
 
 **Started:** September 2026
 **Status:** Ongoing
