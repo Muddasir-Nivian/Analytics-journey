@@ -10,6 +10,7 @@ order_items — connected through foreign keys. Completed 25 questions
 across SELECT, WHERE with AND/OR, ORDER BY, DISTINCT, and LIMIT,
 building up to real business questions combining multiple keywords
 in one query.
+To access the Week 9 workbook [click here](./Work%20Files/Month-3%20Week-9%20SQL%20Practice%20File.pdf/)
 
 **What clicked:**
 Honestly, nothing felt new. Every logic here — filtering with WHERE,
