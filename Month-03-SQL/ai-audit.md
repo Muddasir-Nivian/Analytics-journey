@@ -62,7 +62,8 @@ HAVING distinction correct across every test. Asked to find categories
 with an average price above 500 without ever saying the word HAVING,
 AI correctly used HAVING rather than incorrectly trying WHERE on an
 aggregate — the one thing this week's audit was built specifically to
-check.
+check.  
+To access Week 10 ai audit file [click here](./Work%20Files/Week10_AI_Audit%20(1).md/)
 
 **Lesson:**
 Auditing AI on aggregate queries means checking not just whether the
