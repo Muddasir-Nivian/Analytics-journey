@@ -44,3 +44,29 @@ AI can give you what you need, but the approach behind it can be
 more resilient than yours even when both produce the same result
 right now. Worth checking not just whether an answer matches, but
 whether the method behind it would still hold up if the data changed.
+
+---
+
+## Week 10 Audit — Aggregate Functions, GROUP BY, HAVING
+**Date:** September 2026
+
+**Task given to AI:** Business questions given in plain English, with
+GROUP BY and HAVING never named directly — testing whether AI reaches
+for HAVING instead of WHERE when a task requires filtering a grouped
+result, and whether it correctly identifies the right column to
+group by.
+
+**Results:**
+AI got the aggregate function, the GROUP BY, and the WHERE-versus-
+HAVING distinction correct across every test. Asked to find categories
+with an average price above 500 without ever saying the word HAVING,
+AI correctly used HAVING rather than incorrectly trying WHERE on an
+aggregate — the one thing this week's audit was built specifically to
+check.
+
+**Lesson:**
+Auditing AI on aggregate queries means checking not just whether the
+SUM or JOIN is correct, but whether the GROUP BY column actually
+matches the question being asked. A wrong grouping column is one of
+the quietest possible errors — the query runs, the numbers look real,
+and it takes a real comparison against the original ask to catch it.
