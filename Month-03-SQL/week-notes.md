@@ -26,3 +26,19 @@ different syntax, not a new way of thinking.
 The instinct that querying two tables together requires explicitly
 telling SQL how they relate — not just placing them side by side and
 hoping the filter does the work.
+
+## Week 10 — Aggregate Functions, GROUP BY, HAVING
+**Date:** September 2026
+**Focus:** Grouping data and filtering on aggregated results
+
+**What I built:**
+Completed 17 questions across plain aggregates (COUNT, AVG, MAX, MIN),
+GROUP BY splitting data into buckets, HAVING filtering group results,
+and revenue calculations joining order_items with products.
+
+**What clicked:**
+GROUP BY with HAVING is efficient for putting conditions directly on
+grouped results — filtering a summary after it's built, not the raw
+rows before.
+
+**Confidence:** 4.5/5
