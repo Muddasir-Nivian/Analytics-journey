@@ -9,7 +9,7 @@ Set up a 4-table SQLite database customers, products, orders,
 order_items connected through foreign keys. Completed 25 questions
 across SELECT, WHERE with AND/OR, ORDER BY, DISTINCT, and LIMIT,
 building up to real business questions combining multiple keywords
-in one query.
+in one query.  
 To access the Week 9 workbook [click here](./Work%20Files/Month-3%20Week-9%20SQL%20Practice%20File.pdf/)
 
 **What clicked:**
@@ -34,7 +34,8 @@ hoping the filter does the work.
 **What I built:**
 Completed 17 questions across plain aggregates (COUNT, AVG, MAX, MIN),
 GROUP BY splitting data into buckets, HAVING filtering group results,
-and revenue calculations joining order_items with products.
+and revenue calculations joining order_items with products.  
+To access the Week 10 workbook [click here](./Work%20Files/Month-3%20Week-10%20Practice%20File.md/)
 
 **What clicked:**
 GROUP BY with HAVING is efficient for putting conditions directly on
