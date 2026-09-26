@@ -23,8 +23,8 @@ of a spreadsheet.
 | Week | Focus | Status |
 |---|---|---|
 | Week 9 | Databases, tables, keys, SELECT, WHERE, ORDER BY | Completed |
-| Week 10 | Aggregate functions, GROUP BY, HAVING | Ongoing |
-| Week 11 | JOINs (INNER, LEFT, RIGHT, FULL), subqueries | Upcoming |
+| Week 10 | Aggregate functions, GROUP BY, HAVING | Completed |
+| Week 11 | JOINs (INNER, LEFT, RIGHT, FULL), subqueries | Ongoing |
 | Week 12 | Practice on public datasets, eCommerce order analysis project | Upcoming |
 
 ---
