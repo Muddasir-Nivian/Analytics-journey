@@ -24,8 +24,8 @@ of a spreadsheet.
 |---|---|---|
 | Week 9 | Databases, tables, keys, SELECT, WHERE, ORDER BY | Completed |
 | Week 10 | Aggregate functions, GROUP BY, HAVING | Completed |
-| Week 11 | JOINs (INNER, LEFT, RIGHT, FULL), subqueries | Ongoing |
-| Week 12 | Practice on public datasets, eCommerce order analysis project | Upcoming |
+| Week 11 | JOINs (INNER, LEFT, RIGHT, FULL), subqueries | Completed |
+| Week 12 | Practice on public datasets, eCommerce order analysis project | Ongoing |
 
 ---
 
