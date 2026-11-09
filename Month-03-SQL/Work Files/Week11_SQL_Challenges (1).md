@@ -25,7 +25,10 @@ VALUES (11, 'Yeti Cooler', 'Sports', 249);
 INNER JOIN between orders and customers.  
 **Answer:**  
 ```sql
-SELECT order_id, customer_name FROM customers INNER JOIN orders ON customers.customer_id = orders.customer_id;
+SELECT order_id, customer_name
+FROM customers INNER JOIN orders
+ON customers.customer_id =
+orders.customer_id;
 ```
 ---
 
