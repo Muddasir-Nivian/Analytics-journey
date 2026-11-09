@@ -43,3 +43,31 @@ grouped results — filtering a summary after it's built, not the raw
 rows before.
 
 **Confidence:** 4.5/5
+
+## Week 11 — JOINs and Subqueries
+**Date:** September 2026
+**Focus:** Connecting multiple tables and filtering with subqueries
+
+**What I built:**
+Completed 10 questions across INNER JOIN, LEFT JOIN, RIGHT JOIN,
+FULL JOIN, subqueries with IN, and multi-table chains connecting
+4 tables in one query. Added Karen White and Yeti Cooler to the
+database specifically to give LEFT and RIGHT JOIN something
+meaningful to show — a customer who never ordered and a product
+that was never sold.
+
+**What clicked:**
+LEFT JOIN is useful for extracting and compiling data across
+multiple tables into one result, including rows that have no match
+on the other side — the ones INNER JOIN would silently drop.
+Multi-table chains connecting 4 tables in sequence give bigger
+queries more result accuracy because every link uses the right
+connecting column, and nothing gets paired with the wrong rows.
+
+**The connection back to Week 9:**
+The Q23 bug in Week 9 — where every customer got paired with every
+order because there was no connecting condition — was exactly the
+problem JOIN formally solves. Writing the fix as a WHERE condition
+that week was already a JOIN in everything but name.
+
+**Confidence:** 4.5/5
