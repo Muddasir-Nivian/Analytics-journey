@@ -55,6 +55,7 @@ FULL JOIN, subqueries with IN, and multi-table chains connecting
 database specifically to give LEFT and RIGHT JOIN something
 meaningful to show — a customer who never ordered and a product
 that was never sold.
+To access the Week 10 workbook [click here](./Work%20Files/Week11_SQL_Challenges%20(1).md/)
 
 **What clicked:**
 LEFT JOIN is useful for extracting and compiling data across
