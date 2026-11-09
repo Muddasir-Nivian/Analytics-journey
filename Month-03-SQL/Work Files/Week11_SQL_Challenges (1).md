@@ -39,12 +39,23 @@ orders.customer_id;
 **Q2.** Return every customer's name and their order_id, using LEFT
 JOIN from customers to orders. Then filter to only the rows where
 order_id is NULL — this reveals which customer never placed an order.  
-**Answer:** select customer_name, order_id from customers LEFT JOIN orders on customers.customer_id = orders.customer_id where orders.order_id is null;
+**Answer:**  
+```sql
+SELECT customer_name, order_id FROM
+customers LEFT JOIN orders ON
+customers.customer_id = orders.customer_id WHERE
+orders.order_id is null;
+```
 
 **Q3.** Using the same LEFT JOIN idea in reverse, find which product
 has never appeared in any order_items row.  
-**Answer:** select product_name, order_items.product_id from products LEFT JOIN order_items on products.product_id = order_items.product_id where order_items.product_id is null;
-
+**Answer:**  
+```sql
+SELECT product_name, order_items.product_id FROM
+products LEFT JOIN order_items
+ON products.product_id = order_items.product_id WHERE
+order_items.product_id is null;
+```
 ---
 
 ## SECTION 3 — RIGHT JOIN (everything from the right table, matched or not)
@@ -53,8 +64,13 @@ has never appeared in any order_items row.
 **Q4.** Rewrite Q3 using RIGHT JOIN instead of LEFT JOIN — same
 result, opposite table order. Confirm you get the same product name
 back.  
-**Answer:** select product_name, order_items.product_id from order_items RIGHT JOIN products on order_items.product_id = products.product_id where order_items.product_id is null;
-
+**Answer:**  
+```sql
+SELECT product_name, order_items.product_id FROM
+order_items RIGHT JOIN products ON
+order_items.product_id = products.product_id WHERE
+order_items.product_id is null;
+```
 ---
 
 ## SECTION 4 — FULL JOIN (everything from both sides, matched or not)
@@ -66,8 +82,15 @@ how many customers have zero orders. (Hint: this is really just a
 LEFT JOIN filtered to NULL — FULL JOIN matters more once you're also
 checking the other side simultaneously, which single-table checks
 like this don't fully need. Notice when FULL JOIN is overkill.)  
-**Answer:** select count(*)  customer_name, order_id from customers FULL JOIN orders on customers.customer_id = orders.customer_id where order_id is null OR customer_name is null;
-
+**Answer:**  
+```sql
+SELECT COUNT(*)  customer_name,
+order_id FROM customers FULL JOIN
+orders ON customers.customer_id =
+orders.customer_id WHERE
+order_id is null OR
+customer_name is null;
+```
 ---
 
 ## SECTION 5 — Subqueries (a query inside a query)
@@ -77,12 +100,21 @@ like this don't fully need. Notice when FULL JOIN is overkill.)
 **Q6.** Return the names of every customer who has placed at least
 one order — using a subquery with IN against the orders table (not a
 JOIN this time).  
-**Answer:** select customer_name from customers where customer_id IN (select customer_id from orders where customer_id is not null);
-
+**Answer:**  
+```sql
+SELECT customer_name FROM customers
+WHERE customer_id IN
+(SELECT customer_id FROM orders WHERE
+customer_id is not null);
+```
 **Q7.** Return the names of every product priced above the AVERAGE
 unit_price across all products, using a subquery.  
-**Answer:** select product_name from products where unit_price>(select AVG(unit_price) from products);
-
+**Answer:**  
+```sql
+SELECT product_name FROM products
+WHERE unit_price>(SELECT
+AVG(unit_price) FROM products);
+```
 ---
 
 ## SECTION 6 — Real Business Questions (JOINs across 3+ tables)
@@ -93,14 +125,42 @@ unit_price across all products, using a subquery.
 ID), sorted highest to lowest. This needs customers, orders,
 order_items, and products all joined together — same 4-table chain
 from your Week 10 Q18 correction.  
-**Answer:** select customer_name, SUM(unit_price * quantity) AS Total_revenue from customers JOIN order_items ON customers.customer_id = order_items.product_id  
-JOIN products on order_items.product_id = products.product_id GROUP BY customer_name ORDER BY Total_revenue desc;
-
+**Answer:**  
+```sql
+SELECT customer_name, SUM(unit_price *
+quantity) AS Total_revenue FROM
+customers JOIN order_items ON
+customers.customer_id =
+order_items.product_id  
+JOIN products ON
+order_items.product_id =
+products.product_id GROUP BY
+customer_name ORDER BY Total_revenue
+DESC;
+```
 **Q9.** Which customers have never placed an order? Return their
 names using a LEFT JOIN.  
-**Answer:** select customer_name, order_id from customers LEFT JOIN orders on customers.customer_id = orders.customer_id where order_id is null;
-
+**Answer:**  
+```sql
+SLEECT customer_name, order_id FROM
+customers LEFT JOIN orders ON
+customers.customer_id =
+orders.customer_id WHERE order_id is
+null;
+```
 **Q10.** Which customers have spent more than 1000 dollars in total
 across all their orders? Return customer_name and their total spend.  
-**Answer:** select customer_name, SUM(unit_price * quantity) AS Total_revenue from customers JOIN order_items ON customers.customer_id = order_items.product_id  
-JOIN products on order_items.product_id = products.product_id GROUP BY customer_name HAVING Total_revenue>1000 ORDER BY Total_revenue desc;
+**Answer:**  
+```sql
+SELECT customer_name, SUM(unit_price *
+quantity) AS Total_revenue FROM
+customers JOIN order_items ON
+customers.customer_id =
+order_items.product_id  
+JOIN products ON
+order_items.product_id =
+products.product_id GROUP BY
+customer_name HAVING
+Total_revenue>1000 ORDER BY
+Total_revenue DESC;
+```
