@@ -23,8 +23,10 @@ VALUES (11, 'Yeti Cooler', 'Sports', 249);
 
 **Q1.** Return order_id and customer_name for every order, using
 INNER JOIN between orders and customers.  
-**Answer:** select order_id, customer_name from customers INNER JOIN orders on customers.customer_id = orders.customer_id;
-
+**Answer:**  
+```sql
+SELECT order_id, customer_name FROM customers INNER JOIN orders ON customers.customer_id = orders.customer_id;
+```
 ---
 
 ## SECTION 2 — LEFT JOIN (everything from the left table, matched or not)
