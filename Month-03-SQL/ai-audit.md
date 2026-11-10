@@ -71,3 +71,54 @@ SUM or JOIN is correct, but whether the GROUP BY column actually
 matches the question being asked. A wrong grouping column is one of
 the quietest possible errors — the query runs, the numbers look real,
 and it takes a real comparison against the original ask to catch it.
+
+---
+
+## Week 11 Audit — JOINs and Subqueries
+**Date:** September 2026
+
+**Task given to AI:** Business questions given in plain English with
+no JOIN type named, testing whether AI correctly picks INNER vs LEFT
+based on what the question actually needed.
+
+**Results:**
+AI got all four correctly. The findings this week were not about
+errors but about additions AI made without being asked.
+
+For INNER JOIN, AI added ORDER BY at the end without being asked.
+The result was the same without it. AI structured the output even
+when the task did not require it.
+
+For LEFT JOIN, the task only asked for customer_name but AI also
+returned customer_id alongside it. Same pattern. AI added a column
+to keep the result more structured and recognizable, beyond what was
+asked for.
+
+For the subquery versus JOIN comparison, AI correctly reached for a
+subquery with IN when the task was framed as a simple membership
+check, and reached for INNER JOIN when the task needed data from
+multiple columns across both tables. Right tool for each framing.
+
+For the 4-table chain, AI wrote the full chain correctly.
+customers, orders, order_items, products — with the right ON
+conditions at every link, correct GROUP BY, and correct aggregate.
+No wrong column, no missing table, no grouping mismatch.
+
+**Error type:**
+Not applicable — no errors found this week. The pattern was
+additions, not mistakes.
+
+**Why this matters:**
+AI consistently added structure beyond what was asked — an ORDER BY,
+an extra column — without breaking anything. These additions are
+worth checking before moving to the next step, not because they
+cause errors but because they can quietly change what the output
+looks like and create confusion if the extra column or sorting was
+not intended.
+
+**Lesson:**
+JOINs are fast and easy for AI — faster than a human who is still
+building the logic and syntax from scratch. The audit value this
+week shifted from catching wrong answers to noticing uninstructed
+additions that come standard with AI output whether you asked for
+them or not.
