@@ -1,6 +1,174 @@
-<html>
-<style>
-   div{min-height:1em;}
-</style>
-<body># Week 9 SQL Practice File  <br/><br/>Q1. Return every column from the customers table. <br/>Answer: select * from customers; <br/>Q2. Return only customer_name and region from the customers table. <br/>Answer: select customer_name, region from customers; <br/>Q3. Return product_name and unit_price from the products table. <br/>Answer: select product_name, unit_price from products; <br/>Q4. Return order_id and order_date from the orders table. <br/>Answer: select order_id, order_date from orders; <br/>Q5. Return the names of all customers in the North region. <br/>Answer: select * from customers where region=&#39;North&#39;; <br/>Q6. Return all products with a unit_price below 200. <br/>Answer: select * from Products where unit_price&lt;200; <br/>Q7. Return all orders placed using Credit Card as the payment method. <br/>Answer: select * from orders where payment_method=&#39;Credit Card&#39;; <br/>Q8. Return all customers who are NOT in the North region. <br/>Answer: select * from customers where region!=&#39;North&#39;;<br/>Q9. Return all customers who are in the North region AND in the <br/>Premium segment. <br/>Answer: select * from customers where region=&#39;North&#39; AND <br/>segment=&#39;Premium&#39;; <br/>Q10. Return all products that are in the Electronics category AND cost <br/>more than 1000. <br/>Answer: select * from products where category=&#39;Electronics&#39; AND <br/>unit_price&gt;1000; <br/>Q11. Return all customers who are either in the South OR the West <br/>region. <br/>Answer: select * from customers where region=&#39;South&#39; or region=&#39;West&#39;; <br/>Q12. Return all orders placed via Credit Card OR PayPal. <br/>Answer: select * from orders where payment_method=&#39;Credit Card&#39; Or <br/>&#39;Paypal&#39;; <br/>Q13. Return all products sorted by unit_price from cheapest to most <br/>expensive. <br/>Answer: Select * from products ORDER BY unit_price asc; <br/>Q14. Return all orders sorted by order_date from most recent to oldest. <br/>Answer: select * from orders ORDER BY order_date desc; <br/>Q15. Return customer_name and region sorted alphabeƟcally by <br/>customer_name. <br/>Answer: select customer_name, region from customers ORDER BY <br/>customer_name asc;  <br/>Q16. Return a list of all unique regions in the customers table — no <br/>repeats. <br/>Answer: select disƟnct region from customers;<br/>Q17. Return a list of all unique payment methods used across all orders. <br/>Answer: select disƟnct payment_method from orders;<br/>Q18. Return a list of all unique categories in the products table. <br/>Answer: select disƟnct category from products;<br/>Q19. Return the first 3 customers from the customers table. <br/>Answer: select * from customers limit 3; <br/>Q20. Return the 5 cheapest products by unit_price. <br/>Answer: select * from products order by unit_price asc limit 5; <br/>Q21. The sales director wants a list of all Premium customers sorted <br/>alphabeƟcally. Return their names only.<br/>Answer: select customer_name from customers where <br/>segment=&#39;Premium&#39; order by customer_name asc; <br/>Q22. Find all products that cost between 50 and 500 dollars inclusive. <br/>Sort them by price highest to lowest. <br/>Answer: select * from products where unit_price&gt;=50 and <br/>unit_price&lt;=500 order by unit_price desc;  <br/>Q23. How many unique customers placed orders using a Credit Card? <br/>Think carefully — orders and customers are in separate tables. <br/>You need order_items? No — which two tables do you need here? <br/>Answer: select disƟnct customer_name, payment_method from <br/>customers,orders where payment_method=&#39;Credit Card&#39;; <br/>Q24. Return the names and prices of all products in either the Beauty <br/>or Sports category, sorted by price from lowest to highest. <br/>Answer: select product_name,unit_price from products where <br/>category=&#39;Beauty&#39; or category=&#39;Sports&#39; order by unit_price asc; <br/>Q25. The finance team wants to see every order placed in January 2026 <br/>via Credit Card. Return order_id and order_date. Hint: dates are stored <br/>as text — use LIKE &#39;2026-01%&#39; to match the January paƩern.<br/>Answer: select order_id,order_date from orders where <br/>order_date&gt;=&#39;2026-01-05&#39; and order_date&lt;=&#39;2026-01-28&#39; and <br/>payment_method=&#39;Credit Card&#39;;</body>
-</html>
+# Week 9 SQL Practice File
+
+**Q1.** Return every column from the customers table.  
+**Answer:**  
+```sql
+SELECT * FROM customers;
+```
+
+**Q2.** Return only customer_name and region from the customers table.
+**Answer:**  
+```sql
+SELECT customer_name, region FROM customers;
+```
+
+**Q3.** Return product_name and unit_price from the products table.
+**Answer:**  
+```sql
+SELECT product_name, unit_price FROM products;
+```
+
+**Q4.** Return order_id and order_date from the orders table.
+**Answer:**  
+```sql
+SELECT order_id, order_date FROM orders;
+```
+
+**Q5.** Return the names of all customers in the North region.
+**Answer:**  
+```sql
+SELECT * FROM customers WHERE region='North';
+```
+
+**Q6.** Return all products with a unit_price below 200.
+**Answer:**  
+```sql
+SELECT * FROM Products WHERE unit_price<200;
+```
+
+**Q7.** Return all orders placed using Credit Card as the payment method.
+**Answer:**  
+```sql
+SELECT * FROM orders WHERE payment_method='Credit Card';
+```
+
+**Q8.** Return all customers who are NOT in the North region.
+**Answer:**  
+```sql
+SELECT * FROM customers WHERE region!='North';
+```
+
+**Q9.** Return all customers who are in the North region AND in the
+Premium segment.
+**Answer:**  
+```sql
+SELECT * FROM customers WHERE region='North' AND
+segment='Premium';
+```
+
+**Q10.** Return all products that are in the Electronics category AND cost
+more than 1000.
+**Answer:**  
+```sql
+SELECT * FROM products WHERE category='Electronics' AND
+unit_price>1000;
+```
+
+**Q11.** Return all customers who are either in the South OR the West
+region.
+**Answer:**  
+```sql
+SELECT * FROM customers WHERE region='South' OR region='West';
+```
+
+**Q12.** Return all orders placed via Credit Card OR PayPal.
+**Answer:**  
+```sql
+SELECT * FROM orders WHERE payment_method='Credit Card' OR
+'Paypal';
+```
+
+**Q13.** Return all products sorted by unit_price from cheapest to most
+expensive.
+**Answer:**  
+```sql
+SELECT * FROM products ORDER BY unit_price asc;
+```
+
+**Q14.** Return all orders sorted by order_date from most recent to oldest.
+**Answer:**  
+```sql
+SELECT * FROM orders ORDER BY order_date desc;
+```
+
+**Q15.** Return customer_name and region sorted alphabeƟcally by
+customer_name.
+**Answer:**  
+```sql
+SELECT customer_name, region FROM customers ORDER BY
+customer_name asc;
+```
+
+**Q16.** Return a list of all unique regions in the customers table — no
+repeats.
+**Answer:**  
+```sql
+SELECT DISTINCT region FROM customers;
+```
+
+**Q17.** Return a list of all unique payment methods used across all orders.
+**Answer:**  
+```sql
+SELECT DISTINCT payment_method FROM orders;
+```
+
+**Q18.** Return a list of all unique categories in the products table.
+**Answer:**  
+```sql
+SELECT DISTINCT category FROM products;
+```
+
+**Q19.** Return the first 3 customers from the customers table.
+**Answer:**  
+```sql
+SELECT * FROM customers LIMIT 3;
+```
+
+**Q20.** Return the 5 cheapest products by unit_price.
+**Answer:** 
+```sql
+SELECT * FROM products ORDER BY unit_price ASC LIMIT 5;
+```
+
+**Q21.** The sales director wants a list of all Premium customers sorted
+alphabeƟcally. Return their names only.
+**Answer:**  
+```sql
+SELECT customer_name FROM customers WHERE
+segment='Premium' ORDER BY customer_name ASC;
+```
+
+**Q22.** Find all products that cost between 50 and 500 dollars inclusive.
+Sort them by price highest to lowest.
+**Answer:**  
+```sql
+SELECT * FROM products WHERE unit_price>=50 AND
+unit_price<=500 ORDER BY unit_price DESC;
+```
+
+**Q23.** How many unique customers placed orders using a Credit Card?
+Think carefully — orders and customers are in separate tables.
+You need order_items? No — which two tables do you need here?
+**Answer:**  
+```sql
+SELECT DISTINCT customer_name, payment_method FROM
+customers,orders WHERE payment_method='Credit Card';
+```
+
+**Q24.** Return the names and prices of all products in either the Beauty
+or Sports category, sorted by price from lowest to highest.
+**Answer:**  
+```sql
+SELECT product_name,unit_price FROM products WHERE
+category='Beauty' OR category='Sports' ORDER BY unit_price ASC;
+```
+
+**Q25.** The finance team wants to see every order placed in January 2026
+via Credit Card. Return order_id and order_date. Hint: dates are stored
+as text — use LIKE '2026-01%' to match the January paƩern.
+**Answer:**  
+```sql
+SELECT order_id,order_date FROM orders WHERE
+order_date>='2026-01-05' AND order_date<='2026-01-28' AND
+payment_method='Credit Card';
+```
