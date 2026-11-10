@@ -102,7 +102,8 @@ multiple columns across both tables. Right tool for each framing.
 For the 4-table chain, AI wrote the full chain correctly.
 customers, orders, order_items, products — with the right ON
 conditions at every link, correct GROUP BY, and correct aggregate.
-No wrong column, no missing table, no grouping mismatch.
+No wrong column, no missing table, no grouping mismatch.  
+To access week 11 ai audit file [click here](./Work%20Files/Week11_AI_Audit%20(2).md/)
 
 **Error type:**
 Not applicable — no errors found this week. The pattern was
