@@ -42,21 +42,35 @@ one single number.
 ---
 
 **Q1.** How many total customers does Vantree have?  
-**Answer:** select count(DISTINCT customer_name) from customers;
+**Answer:**  
+```sql
+SELECT COUNT(DISTINCT customer_name) FROM customers;
+```
 
 **Q2.** How many total products does Vantree sell?  
-**Answer:** select count(DISTINCT product_id) AS Total_products from order_items;
+**Answer:**
+```sql
+SELECT COUNT(DISTINCT product_id) AS Total_products FROM order_items;
+```
 
 **Q3.** What is the average unit_price across all products?  
-**Answer:** select AVG(unit_price) from products;
+**Answer:**  
+```sql
+SELECT AVG(unit_price) FROM products;
+```
 
 **Q4.** What is the most expensive product's price? (Just the number,
 not the product name yet.)  
-**Answer:** select MAX(unit_price) from products;
+**Answer:**  
+```sql
+SELECT MAX(unit_price) FROM products;
+```
 
 **Q5.** What is the cheapest product's price?  
-**Answer:** select MIN(unit_price) from products;
-
+**Answer:**  
+```sql
+SELECT MIN(unit_price) FROM products;
+```
 ---
 
 ## SECTION 2 — GROUP BY (splitting into groups before aggregating)
@@ -83,21 +97,35 @@ you're grouping by. You cannot mix in a random third column.
 ---
 
 **Q6.** How many customers are in each region? Return region and the count.  
-**Answer:** select DISTINCT region, count(DISTINCT customer_id) from customers GROUP BY region;
+**Answer:**  
+```sql
+SELECT DISTINCT region, COUNT(DISTINCT customer_id) FROM customers GROUP BY region;
+```
 
 **Q7.** What is the average unit_price for each product category?  
-**Answer:** select DISTINCT category, avg(unit_price) from products GROUP BY category;
+**Answer:**  
+```sql
+SELECT DISTINCT category, AVG(unit_price) FROM products GROUP BY category;
+```
 
 **Q8.** How many customers are in each segment (Premium, Standard, Budget)?  
-**Answer:** select DISTINCT segment, count(DISTINCT customer_id) from customers GROUP BY segment;
+**Answer:**  
+```sql
+SELECT DISTINCT segment, COUNT(DISTINCT customer_id) FROM customers GROUP BY segment;
+```
 
 **Q9.** How many orders were placed with each payment method?  
-**Answer:** select DISTINCT payment_method, count(order_id) from orders GROUP BY payment_method;
+**Answer:**  
+```sql
+SELECT DISTINCT payment_method, COUNT(order_id) FROM orders GROUP BY payment_method;
+```
 
 **Q10.** For each product_id in order_items, what is the total quantity
 sold? (Group by product_id, sum the quantity.)  
-**Answer:** select DISTINCT product_id, sum(quantity) from order_items GROUP BY product_id;
-
+**Answer:**  
+```sql
+SELECT DISTINCT product_id, SUM(quantity) FROM order_items GROUP BY product_id;
+```
 ---
 
 ## SECTION 3 — HAVING (filtering AFTER grouping)
@@ -122,18 +150,29 @@ HAVING AGGREGATE_FUNCTION(other_column) > some_value;
 ---
 
 **Q11.** Which product categories have an average unit_price above 500?  
-**Answer:** select DISTINCT category, avg(unit_price) from products GROUP BY category HAVING avg(unit_price)>500;
+**Answer:**  
+```sql
+SELECT DISTINCT category, AVG(unit_price) FROM products GROUP BY category HAVING AVG(unit_price)>500;
+```
 
 **Q12.** Which regions have more than 2 customers?  
-**Answer:** select DISTINCT region, count(DISTINCT customer_id) from customers GROUP BY region HAVING count(DISTINCT customer_id)>2;
+**Answer:**  
+```sql
+SELECT DISTINCT region, COUNT(DISTINCT customer_id) FROM customers GROUP BY region HAVING COUNT(DISTINCT customer_id)>2;
+```
 
 **Q13.** Which payment methods were used more than 4 times?  
-**Answer:** select DISTINCT payment_method, count(DISTINCT order_id) from orders GROUP BY payment_method HAVING count(DISTINCT order_id)>4;
+**Answer:**  
+```sql
+SELECT DISTINCT payment_method, COUNT(DISTINCT order_id) FROM orders GROUP BY payment_method HAVING COUNT(DISTINCT order_id)>4;
+```
 
 **Q14.** Which customers placed more than 1 order? Return customer_id
 and their order count.  
-**Answer:** select DISTINCT customer_id,order_id, count(DISTINCT order_id) from orders GROUP BY customer_id HAVING count(DISTINCT order_id)>1;
-
+**Answer:**  
+```sql
+SELECT DISTINCT customer_id,order_id, COUNT(DISTINCT order_id) FROM orders GROUP BY customer_id HAVING COUNT(DISTINCT order_id)>1;
+```
 ---
 
 ## SECTION 4 — Real Revenue Calculations (combining tables + aggregates)
@@ -155,15 +194,23 @@ unit_price sit in the same row, letting you multiply them.
 ---
 
 **Q15.** Calculate total revenue (quantity × unit_price) for each order_id.  
-**Answer:** select DISTINCT order_id, SUM(quantity * unit_price) AS Total_Revenue from order_items oi JOIN products p ON oi.product_id = p.product_id GROUP BY order_id;
+**Answer:**  
+```sql
+SELECT DISTINCT order_id, SUM(quantity * unit_price) AS Total_Revenue FROM order_items oi JOIN products p ON oi.product_id = p.product_id GROUP BY order_id;
+```
 
 **Q16.** Calculate total revenue for each product category, sorted
 highest to lowest.  
-**Answer:** select DISTINCT category, SUM(quantity * unit_price) from order_items oi JOIN products p ON oi.product_id = p.product_id GROUP BY category ORDER BY SUM(quantity * unit_price) desc;
+**Answer:**  
+```sql
+SELECT DISTINCT category, SUM(quantity * unit_price) FROM order_items oi JOIN products p ON oi.product_id = p.product_id GROUP BY category ORDER BY SUM(quantity * unit_price) DESC;
+```
 
 **Q17.** Which product categories generated more than 1000 in total revenue?  
-**Answer:** select DISTINCT category, SUM(quantity * unit_price) from order_items oi JOIN products p ON oi.product_id = p.product_id GROUP BY category HAVING SUM(quantity * unit_price)>1000;
-
+**Answer:**  
+```sql
+SELECT DISTINCT category, SUM(quantity * unit_price) FROM order_items oi JOIN products p ON oi.product_id = p.product_id GROUP BY category HAVING SUM(quantity * unit_price)>1000;
+```
 
 ---
 
