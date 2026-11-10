@@ -11,9 +11,9 @@ LEFT based on whether the question needs "only matches" or
 
 **AUDIT 1 — INNER JOIN (should be obvious to AI)**
 
-Task given to AI: Return order_id and customer_name for every order
+**Task given to AI:** Return order_id and customer_name for every order
 
-Exact query AI produced: SELECT o.order_id, c.customer_name  
+**Exact query AI produced:** SELECT o.order_id, c.customer_name  
 FROM orders o  
 INNER JOIN customers c ON o.customer_id = c.customer_id  
 ORDER BY o.order_id;  
