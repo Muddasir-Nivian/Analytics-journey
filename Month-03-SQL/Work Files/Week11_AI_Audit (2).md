@@ -1,4 +1,4 @@
-## Week 11 Audit — JOINs and Subqueries
+# Week 11 Audit — JOINs and Subqueries
 **Date:** September 2026
 
 **Task given to AI:**
@@ -9,81 +9,91 @@ LEFT based on whether the question needs "only matches" or
 
 ---
 
-**AUDIT 1 — INNER JOIN (should be obvious to AI)**
+## AUDIT 1 — INNER JOIN (should be obvious to AI)
 
 **Task given to AI:** Return order_id and customer_name for every order
 
-**Exact query AI produced:** SELECT o.order_id, c.customer_name  
+**Exact query AI produced:**  
+```sql
+SELECT o.order_id, c.customer_name  
 FROM orders o  
 INNER JOIN customers c ON o.customer_id = c.customer_id  
 ORDER BY o.order_id;  
+```  
+**Was AI correct? Yes / No / Partially:** Yes
 
-Was AI correct? Yes / No / Partially: Yes
+**What was wrong or missing:** Nothing was missed but Ai used ORDER BY in last which was not really needed
 
-What was wrong or missing: Nothing was missed but Ai used ORDER BY in last which was not really needed
+**Error type:** Wrong JOIN type / Wrong ON condition / Wrong column / Syntax / Logic: Additional clause not error
 
-Error type: Wrong JOIN type / Wrong ON condition / Wrong column / Syntax / Logic: Additional clause not error
+**How I caught it:** running my query to this task without ORDER BY which produced the same result as with ORDER BY 
 
-How I caught it: running my query to this task without ORDER BY which produced the same result as with ORDER BY 
-
-What this taught me: Ai keeps the work structured and clean even if something is not really needed it adds by on its own  
+**What this taught me:** Ai keeps the work structured and clean even if something is not really needed it adds by on its own  
 if that addition is completely fine without any chances of it creating error
 
 ---
 
-**AUDIT 2 — LEFT JOIN (the critical test — does AI know when NOT to use INNER?)**
+## AUDIT 2 — LEFT JOIN (the critical test — does AI know when NOT to use INNER?)
 
-Task given to AI: sales team needs customer name who has never placed an order
+**Task given to AI:** sales team needs customer name who has never placed an order
 
-Exact query AI produced: SELECT c.customer_id, c.customer_name  
+**Exact query AI produced:**  
+```sql
+SELECT c.customer_id, c.customer_name  
 FROM customers c  
 LEFT JOIN orders o ON c.customer_id = o.customer_id  
 WHERE o.order_id IS NULL;
+```  
+**Was AI correct? Yes / No / Partially:** Yes
 
-Was AI correct? Yes / No / Partially: Yes
-
-What was wrong or missing: Nothing was missed but the task given to Ai was just show the customer name  
+**What was wrong or missing:** Nothing was missed but the task given to Ai was just show the customer name  
 but Ai did addition of customer id to keep it more structured and better to recognize
 
-Error type: Used INNER instead of LEFT / Wrong ON condition / Syntax / Logic: Additional column selection not error but something which was not required
+**Error type:** Used INNER instead of LEFT / Wrong ON condition / Syntax / Logic: Additional column selection not error but something which was not required
 
-How I caught it: spotting two columns after SELECT
+**How I caught it:** spotting two columns after SELECT
 
-What this taught me: Ai can do additions intending to keep the result more structured and recognizable worth checking Ai output before moving to the next step
+**What this taught me:** Ai can do additions intending to keep the result more structured and recognizable worth checking Ai output before moving to the next step
 
 ---
 
-**AUDIT 3 — Subquery vs JOIN (does AI pick the cleaner approach?)**
+## AUDIT 3 — Subquery vs JOIN (does AI pick the cleaner approach?)
 
-Task given to AI: customers who has placed at least one order, customer_id and order_id and number of orders customer each customer has placed
+**Task given to AI:** customers who has placed at least one order, customer_id and order_id and number of orders customer each customer has placed
 
-Exact query AI produced (subquery version): SELECT customer_id, customer_name
+**Exact query AI produced (subquery version):**  
+```sql
+SELECT customer_id, customer_name
 FROM customers
 WHERE customer_id IN (SELECT customer_id FROM orders);
-
-Exact query AI produced (JOIN version): SELECT DISTINCT c.customer_id, c.customer_name
+```  
+**Exact query AI produced (JOIN version):**  
+```sql
+SELECT DISTINCT c.customer_id, c.customer_name
 FROM customers c
 INNER JOIN orders o ON c.customer_id = o.customer_id
 ORDER BY c.customer_id;
+```  
+**Was AI's choice appropriate for each case? Yes / No / Partially:** Yes
 
-Was AI's choice appropriate for each case? Yes / No / Partially: Yes
+**What was wrong or missing:** Nothing
 
-What was wrong or missing: Nothing
+**How I caught it:** just checked the answer
 
-How I caught it: just checked the answer
-
-What this taught me: Nothing
+**What this taught me:** Nothing
 
 ---
 
-**AUDIT 4 — Multi-table JOIN (3-4 tables chained together)**
+## AUDIT 4 — Multi-table JOIN (3-4 tables chained together)
 
-Task given to AI:
+**Task given to AI:**
 "Calculate total revenue generated by each customer." (Requires
 customers, orders, order_items, and products all joined in one chain
 — the exact same pattern as Week 10's Q18 correction.)
 
-Exact query AI produced: SELECT c.customer_name,
+**Exact query AI produced:**  
+```sql
+SELECT c.customer_name,
        SUM(oi.quantity * p.unit_price) AS total_revenue
 FROM customers c
 INNER JOIN orders o       ON c.customer_id = o.customer_id
@@ -91,22 +101,22 @@ INNER JOIN order_items oi ON o.order_id    = oi.order_id
 INNER JOIN products p     ON oi.product_id = p.product_id
 GROUP BY c.customer_id, c.customer_name
 ORDER BY total_revenue DESC, c.customer_name;
+```  
+**Was AI correct? Yes / No / Partially:** yes
 
-Was AI correct? Yes / No / Partially: yes
+**What was wrong or missing:** Nothing
 
-What was wrong or missing: Nothing
+**Error type:** Missing table in chain / Wrong ON condition / Wrong aggregate / Wrong grouping column / Syntax: Nothing
 
-Error type: Missing table in chain / Wrong ON condition / Wrong aggregate / Wrong grouping column / Syntax: Nothing
+**How I caught it:** Checked the answer
 
-How I caught it: Checked the answer
-
-What this taught me: Nothing
+**What this taught me:** Nothing
 
 ---
 
 ## WEEKLY SUMMARY
 
-Overall AI accuracy this week: __ out of 4 tested correctly
+**Overall AI accuracy this week:** 4 out of 4 tested correctly
 
 Did AI correctly choose LEFT JOIN over INNER JOIN when the question
 needed it, without being told which keyword to use? This is the most
